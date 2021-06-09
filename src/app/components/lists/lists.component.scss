@@ -1,0 +1,70 @@
+.listsTable{
+    display: flex;
+    flex-direction: row;
+    place-content: flex-start space-evenly;
+    // flex-wrap: wrap;
+    position: absolute;
+}
+.lists-col {
+    min-height: 30rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    background: whitesmoke;
+    margin: 1rem;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.lists-header{
+    display: flex;
+    justify-content: space-between;
+    word-break: break-all;
+    min-height: 3rem;
+    max-height: 3rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.addTask{
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.popup-card{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    place-content: center space-between;
+}
+
+.card-outline{
+    padding: 0.5rem;
+    background: aquamarine;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+
+.cards-header{
+    max-width: 70%;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.card-section{
+    min-height: 22rem;
+    max-height: 22rem;
+    overflow: auto;
+}
+.add-task{
+    border-radius: 100%;
+    background: cadetblue;
+    padding: 0.5rem;
+}

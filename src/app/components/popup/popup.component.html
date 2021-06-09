@@ -1,0 +1,13 @@
+<div class="popup-card">
+    <div class="cancel">
+        <span (click)="hidePopup()">X</span>
+    </div>
+    <div>
+        <legend>Title: </legend>
+        <input [(ngModel)]="title"/>
+        <legend>Description:</legend>
+        <textarea [(ngModel)]="desc"></textarea>
+        <button [disabled]="!title || !desc" (click)="createTask($event)">Add Task!!</button>
+    </div>
+
+</div>

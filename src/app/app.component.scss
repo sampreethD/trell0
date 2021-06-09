@@ -1,0 +1,38 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #41c1b7;
+    color: black;
+    padding: 0.2rem;
+}
+.addList{
+    margin: 1rem;
+    background-color: aqua;
+    color: black;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;  
+    width: 50%;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #41c1b7;
+    color: white;
+    text-align: center;
+ }
+

@@ -1,0 +1,33 @@
+<div class="listsTable">
+    <div *ngFor="let list of lists; let i = index">
+        <div class="lists-col">
+            <div class="lists-header">
+                <h3>{{list.name || ''}}</h3>
+                <span class="addTask" (click)="deleteList(i)">X</span>
+            </div>
+            <hr>
+            <div id="{{list.name}}-{{i}}" (drop)="drop($event)" (dragover)="allowDrop($event)" class="card-section">
+                <div *ngFor="let card of list.cards;let cardIndex=index">
+                    <div class="card-outline" id={{i}} draggable="true" (dragstart)="drag($event,i,cardIndex)">
+                        <div  class="cards">
+                            <span class="cards-header">{{card.title || ''}}</span>
+                            <br>
+                            <span (click)="deleteTask(i,cardIndex)" style="cursor: pointer;">X</span>
+                        </div> 
+                        <hr> 
+                        <div>
+                            <span>Description: {{card.description || ''}}</span><br>
+                            <span>Created at: {{card.created_at | date:'mediumDate'}}</span>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="createTask.show && createTask.index == i" class="popup-card">
+                <app-popup (closePop) = "createTask.show = false" (newTask)="createNewTask($event,i)"></app-popup>
+            </div>
+            <div class="addTask">
+                <h3 class="add-task" (click)="addTask(i)">+</h3>
+            </div>
+        </div>
+    </div>
+</div>
